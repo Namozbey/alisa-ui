@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   inline={false}
   inlineBlock={false}
   is="div"
   relative={true}
   w="full"
 >
-  <Box
+  <ForwardRef
     bg="gray-light"
     inline={false}
     inlineBlock={false}
@@ -19,12 +19,12 @@ exports[`Image renders matching snapshot 1`] = `
       }
     }
   />
-  <WithTheme(Base)
+  <ForwardRef
     absolute={true}
     inset={0}
     is="img"
     src="/static/assets/tubgirl.gif"
     w="full"
   />
-</Box>
+</ForwardRef>
 `;

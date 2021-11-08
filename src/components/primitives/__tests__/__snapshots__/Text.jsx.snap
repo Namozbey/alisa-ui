@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text renders matching snapshot 1`] = `
-<WithTheme(Base)
+<ForwardRef
   font={Array []}
   is="span"
   leading="normal"
   text={Array []}
 >
   Hello World
-</WithTheme(Base)>
+</ForwardRef>
 `;

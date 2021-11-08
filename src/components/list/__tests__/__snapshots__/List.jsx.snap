@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   flex={
     Array [
       true,
@@ -18,7 +18,7 @@ exports[`List renders matching snapshot 1`] = `
     }
   }
 >
-  <Box
+  <ForwardRef
     inline={false}
     inlineBlock={false}
     is="li"
@@ -33,8 +33,8 @@ exports[`List renders matching snapshot 1`] = `
     <span>
       One
     </span>
-  </Box>
-  <Box
+  </ForwardRef>
+  <ForwardRef
     inline={false}
     inlineBlock={false}
     is="li"
@@ -49,8 +49,8 @@ exports[`List renders matching snapshot 1`] = `
     <span>
       Two
     </span>
-  </Box>
-  <Box
+  </ForwardRef>
+  <ForwardRef
     inline={false}
     inlineBlock={false}
     is="li"
@@ -65,6 +65,6 @@ exports[`List renders matching snapshot 1`] = `
     <span>
       Three
     </span>
-  </Box>
-</Box>
+  </ForwardRef>
+</ForwardRef>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavItem renders matching snapshot 1`] = `
-<Touchable
+<ForwardRef
   bg-hocus="white"
   block={true}
   disabled={false}
@@ -23,5 +23,5 @@ exports[`NavItem renders matching snapshot 1`] = `
   text-hocus="blue-400"
 >
   Link
-</Touchable>
+</ForwardRef>
 `;

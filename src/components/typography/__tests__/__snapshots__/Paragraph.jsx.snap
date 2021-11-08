@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph renders matching snapshot 1`] = `
-<Text
+<ForwardRef
   bold={false}
   is="p"
   leading="normal"
@@ -19,5 +19,5 @@ exports[`Paragraph renders matching snapshot 1`] = `
   tight={false}
 >
   Lorem ipsum dolor sit amet
-</Text>
+</ForwardRef>
 `;

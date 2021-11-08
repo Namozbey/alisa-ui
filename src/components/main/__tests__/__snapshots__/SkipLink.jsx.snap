@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SkipLink renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   inline={false}
   inlineBlock={false}
   is="div"
   visuallyHiddenFocusable={true}
 >
-  <FillButton
+  <ForwardRef
     absolute={true}
     bg="white"
     href="#main"
@@ -16,6 +16,6 @@ exports[`SkipLink renders matching snapshot 1`] = `
     text="black"
   >
     Skip to main content
-  </FillButton>
-</Box>
+  </ForwardRef>
+</ForwardRef>
 `;

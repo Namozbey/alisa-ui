@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders matching snapshot 1`] = `
-<Touchable
+<ForwardRef
   bg="blue-400"
   bg-hocus="blue-500"
   border={
@@ -25,5 +25,5 @@ exports[`Button renders matching snapshot 1`] = `
   type="button"
 >
   Submit
-</Touchable>
+</ForwardRef>
 `;

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardFooter renders matching snapshot 1`] = `
-<Flex
+<ForwardRef
   col={false}
   inline={false}
   inlineFlex={false}
@@ -15,5 +15,5 @@ exports[`CardFooter renders matching snapshot 1`] = `
     key=".0"
     rounded="none"
   />
-</Flex>
+</ForwardRef>
 `;

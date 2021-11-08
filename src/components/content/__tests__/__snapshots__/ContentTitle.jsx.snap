@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentBlock renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   aria-labelledby="content-1"
   inline={false}
   inlineBlock={false}
@@ -16,5 +16,5 @@ exports[`ContentBlock renders matching snapshot 1`] = `
       }
     }
   />
-</Box>
+</ForwardRef>
 `;

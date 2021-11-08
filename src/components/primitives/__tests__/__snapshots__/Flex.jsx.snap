@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Flex renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   flex={
     Array [
       true,
@@ -13,5 +13,5 @@ exports[`Flex renders matching snapshot 1`] = `
   is="div"
 >
   Hello World
-</Box>
+</ForwardRef>
 `;

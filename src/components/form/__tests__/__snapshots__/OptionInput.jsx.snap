@@ -1,15 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptionInput renders matching snapshot 1`] = `
-<Touchable
+<ForwardRef
   defaultChecked={true}
   disabled={false}
   flex={true}
-  is={[Function]}
+  is={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "WithTheme(undefined)",
+      "render": [Function],
+    }
+  }
   items="center"
   onTouch={[Function]}
 >
-  <Box
+  <ForwardRef
     checked={true}
     inline={false}
     inlineBlock={false}
@@ -26,7 +32,7 @@ exports[`OptionInput renders matching snapshot 1`] = `
     value="test-1"
     visuallyHidden={true}
   />
-  <Flex
+  <ForwardRef
     border={
       Array [
         true,
@@ -52,7 +58,7 @@ exports[`OptionInput renders matching snapshot 1`] = `
     wrap={false}
     wrapReverse={false}
   >
-    <Box
+    <ForwardRef
       bg="blue-400"
       h={2}
       inline={false}
@@ -61,8 +67,8 @@ exports[`OptionInput renders matching snapshot 1`] = `
       rounded="full"
       w={2}
     />
-  </Flex>
-  <Box
+  </ForwardRef>
+  <ForwardRef
     font="normal"
     inline={false}
     inlineBlock={true}
@@ -71,6 +77,6 @@ exports[`OptionInput renders matching snapshot 1`] = `
     visuallyHidden={false}
   >
     Test?
-  </Box>
-</Touchable>
+  </ForwardRef>
+</ForwardRef>
 `;

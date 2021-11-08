@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavToggle renders matching snapshot 1`] = `
-<WithTheme(Button)
+<ForwardRef
   aria-controls="undefined-nav"
   aria-haspopup="true"
   aria-label="Open menu"
@@ -14,7 +14,7 @@ exports[`NavToggle renders matching snapshot 1`] = `
   text-hocus="blue-400"
   w={12}
 >
-  <Box
+  <ForwardRef
     flex={
       Array [
         true,
@@ -32,6 +32,6 @@ exports[`NavToggle renders matching snapshot 1`] = `
     <Bar />
     <Bar />
     <Bar />
-  </Box>
-</WithTheme(Button)>
+  </ForwardRef>
+</ForwardRef>
 `;

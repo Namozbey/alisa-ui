@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Box renders matching snapshot 1`] = `
-<WithTheme(Base)
+<ForwardRef
   inline={false}
   inlineBlock={false}
   is="div"
 >
   Hello World
-</WithTheme(Base)>
+</ForwardRef>
 `;

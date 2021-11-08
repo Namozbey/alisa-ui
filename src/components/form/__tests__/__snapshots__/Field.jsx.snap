@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Field renders matching snapshot 1`] = `
-<Box
+<ForwardRef
   id="field-1"
   inline={false}
   inlineBlock={false}
@@ -13,7 +13,7 @@ exports[`Field renders matching snapshot 1`] = `
   }
   maxW="sm"
 >
-  <WithTheme(Label)
+  <ForwardRef
     field={
       Object {
         "disabled": false,
@@ -27,8 +27,8 @@ exports[`Field renders matching snapshot 1`] = `
     key=".0"
   >
     Password
-  </WithTheme(Label)>
-  <HelpText
+  </ForwardRef>
+  <ForwardRef
     field={
       Object {
         "disabled": false,
@@ -39,13 +39,18 @@ exports[`Field renders matching snapshot 1`] = `
         "labelId": undefined,
       }
     }
-    is={[Function]}
+    is={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
     key=".1"
     size={1}
   >
     Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-  </HelpText>
-  <WithTheme(TextInput)
+  </ForwardRef>
+  <ForwardRef
     field={
       Object {
         "disabled": false,
@@ -60,7 +65,7 @@ exports[`Field renders matching snapshot 1`] = `
     name="password"
     type="password"
   />
-  <ErrorText
+  <ForwardRef
     field={
       Object {
         "disabled": false,
@@ -71,11 +76,16 @@ exports[`Field renders matching snapshot 1`] = `
         "labelId": undefined,
       }
     }
-    is={[Function]}
+    is={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
     key=".3"
     size={1}
   >
     Please complete
-  </ErrorText>
-</Box>
+  </ForwardRef>
+</ForwardRef>
 `;

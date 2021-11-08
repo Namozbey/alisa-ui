@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SiteWrap renders matching snapshot 1`] = `
-<Flex
+<ForwardRef
   col={true}
   font="sans"
   inline={false}
@@ -19,7 +19,7 @@ exports[`SiteWrap renders matching snapshot 1`] = `
   wrap={false}
   wrapReverse={false}
 >
-  <Box
+  <ForwardRef
     flex={
       Array [
         "auto",
@@ -30,18 +30,18 @@ exports[`SiteWrap renders matching snapshot 1`] = `
     inlineBlock={false}
     is="div"
   >
-    <WithTheme(Header)
+    <ForwardRef
       key=".0"
     >
       Header
-    </WithTheme(Header)>
+    </ForwardRef>
     <p
       key=".1"
     >
       Body
     </p>
-  </Box>
-  <Box
+  </ForwardRef>
+  <ForwardRef
     flex={
       Array [
         "auto",
@@ -58,9 +58,9 @@ exports[`SiteWrap renders matching snapshot 1`] = `
       }
     }
   >
-    <WithTheme(Footer)>
+    <ForwardRef>
       Footer
-    </WithTheme(Footer)>
-  </Box>
-</Flex>
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
 `;

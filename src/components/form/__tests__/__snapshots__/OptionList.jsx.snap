@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OptionList renders matching snapshot 1`] = `
-<WithTheme(List)
+<ForwardRef
   m={
     Object {
       "b": 0,
@@ -9,7 +9,7 @@ exports[`OptionList renders matching snapshot 1`] = `
   }
   reset={true}
 >
-  <Radio
+  <ForwardRef
     checked={false}
     id="undefined-yes"
     key=".0"
@@ -18,7 +18,7 @@ exports[`OptionList renders matching snapshot 1`] = `
     onChange={[Function]}
     value="yes"
   />
-  <Radio
+  <ForwardRef
     checked={false}
     id="undefined-no"
     key=".1"
@@ -27,7 +27,7 @@ exports[`OptionList renders matching snapshot 1`] = `
     onChange={[Function]}
     value="no"
   />
-  <Radio
+  <ForwardRef
     checked={false}
     id="undefined-maybe"
     key=".2"
@@ -36,5 +36,5 @@ exports[`OptionList renders matching snapshot 1`] = `
     onChange={[Function]}
     value="maybe"
   />
-</WithTheme(List)>
+</ForwardRef>
 `;
