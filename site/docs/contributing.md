@@ -1,6 +1,6 @@
 ## Issues / Suggestions
 
-Bug fixes & enhancments can be raised on the [GitHub repository](https://github.com/emortlock/tailwind-react) though the standard use of issues / pull requests.
+Bug fixes & enhancments can be raised on the [GitHub repository](https://github.com/Namozbey/alisa-ui) though the standard use of issues / pull requests.
 
 ## Working on the library
 

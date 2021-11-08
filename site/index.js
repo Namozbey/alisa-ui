@@ -13,7 +13,7 @@ const components = fs.readdirSync(
 )
 
 module.exports = {
-  title: `Tailwind React UI`,
+  title: `Alisa UI`,
   version,
   sections: [
     {

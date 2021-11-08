@@ -1,7 +1,7 @@
-Tailwind React UI uses [React context](https://reactjs.org/docs/context.html) in order to determine what class names to use when applying cosmetic styles to components. Using `TailwindThemeProvider` you can set your desired styling which will be used by all Tailwind React UI components nested within.
+Alisa UI uses [React context](https://reactjs.org/docs/context.html) in order to determine what class names to use when applying cosmetic styles to components. Using `TailwindThemeProvider` you can set your desired styling which will be used by all Alisa UI components nested within.
 
 ```jsx static
-import { TailwindThemeProvider, Button } from 'tailwind-react-ui'
+import { TailwindThemeProvider, Button } from 'alisa-ui'
 
 const MyApp = () => (
   <TailwindThemeProvider
