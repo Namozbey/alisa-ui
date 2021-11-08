@@ -90,7 +90,7 @@ module.exports = {
       return componentPath
     }
     const name = path.basename(componentPath, '.jsx')
-    return `import { ${name} } from 'tailwind-react-ui'`
+    return `import { ${name} } from 'alisa-ui'`
   },
   styles: {
     Pre: {
