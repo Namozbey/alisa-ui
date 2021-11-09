@@ -1,3 +1,4 @@
+const colors = require('./tools/colors')
 const plugins = require('./src/plugins')
 
 module.exports = {
@@ -6,7 +7,9 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors,
+    },
   },
   variants: {},
   plugins: [...Object.keys(plugins).map(name => plugins[name]())],
