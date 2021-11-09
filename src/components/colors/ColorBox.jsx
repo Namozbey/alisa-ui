@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import colors from '../../../tools/colors'
+import colors from '../../utils/colors'
 
 const ColorBox = forwardRef(({ color, children }) => {
   const [name, level] = color.split('-')
@@ -23,7 +23,7 @@ const ColorBox = forwardRef(({ color, children }) => {
       </div>
       <div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
         <div className="text-xs font-medium text-gray-900">{color}</div>
-        <div className="text-xs text-gray-700">{colors[name][level]}</div>
+        <div className="text-xs text-gray-500">{colors[name][level]}</div>
       </div>
     </div>
   )
