@@ -1,3 +1,15 @@
+Default
+
+```jsx
+<Row style={{ gap: 10 }}>
+  <ColorBox color="primary" />
+  <ColorBox color="success" />
+  <ColorBox color="danger" />
+  <ColorBox color="warning" />
+  <ColorBox color="info" />
+</Row>
+```
+
 Teal
 
 ```jsx
@@ -83,19 +95,52 @@ Red
 </Row>
 ```
 
-Primary
+Blue
 
 ```jsx
 <Row style={{ gap: 10 }}>
-  <ColorBox color="primary-50" />
-  <ColorBox color="primary-100" />
-  <ColorBox color="primary-200" />
-  <ColorBox color="primary-300" />
-  <ColorBox color="primary-400" />
-  <ColorBox color="primary-500" />
-  <ColorBox color="primary-600" />
-  <ColorBox color="primary-700" />
-  <ColorBox color="primary-800" />
-  <ColorBox color="primary-900" />
+  <ColorBox color="blue-50" />
+  <ColorBox color="blue-100" />
+  <ColorBox color="blue-200" />
+  <ColorBox color="blue-300" />
+  <ColorBox color="blue-400" />
+  <ColorBox color="blue-500" />
+  <ColorBox color="blue-600" />
+  <ColorBox color="blue-700" />
+  <ColorBox color="blue-800" />
+  <ColorBox color="blue-900" />
 </Row>
+```
+
+Gray
+
+```jsx
+<div>
+  Dark
+  <Row style={{ gap: 10 }}>
+    <ColorBox color="darkgray-1" />
+    <ColorBox color="darkgray-2" />
+    <ColorBox color="darkgray-3" />
+    <ColorBox color="darkgray-4" />
+    <ColorBox color="darkgray-5" />
+  </Row>
+  <br />
+  Middle
+  <Row style={{ gap: 10 }}>
+    <ColorBox color="midgray-1" />
+    <ColorBox color="midgray-2" />
+    <ColorBox color="midgray-3" />
+    <ColorBox color="midgray-4" />
+    <ColorBox color="midgray-5" />
+  </Row>
+  <br />
+  Light
+  <Row style={{ gap: 10 }}>
+    <ColorBox color="lightgray-1" />
+    <ColorBox color="lightgray-2" />
+    <ColorBox color="lightgray-3" />
+    <ColorBox color="lightgray-4" />
+    <ColorBox color="lightgray-5" />
+  </Row>
+</div>
 ```

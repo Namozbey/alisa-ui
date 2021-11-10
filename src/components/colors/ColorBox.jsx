@@ -5,6 +5,7 @@ const colors = require('../../utils/colors')
 
 const ColorBox = forwardRef(({ color, children }) => {
   const [name, level] = color.split('-')
+  const hex = level ? colors[name][level] : colors[name]
 
   return (
     <div style={{ width: 150 }}>
@@ -24,7 +25,7 @@ const ColorBox = forwardRef(({ color, children }) => {
       </div>
       <div className="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
         <div className="text-xs font-medium text-gray-900">{color}</div>
-        <div className="text-xs text-gray-500">{colors[name][level]}</div>
+        <div className="text-xs text-gray-500">{hex}</div>
       </div>
     </div>
   )
