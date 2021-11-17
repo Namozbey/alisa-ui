@@ -1,4 +1,4 @@
-const colors = require('./src/utils/colors')
+const colors = require('./constants/colors')
 const plugins = require('./src/plugins')
 
 module.exports = {
