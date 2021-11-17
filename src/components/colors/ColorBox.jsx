@@ -1,7 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-
-const { colors } = require('../theme')
+import { colors } from '../theme'
 
 const ColorBox = forwardRef(({ color, children }) => {
   const [name, level] = color.split('-')
