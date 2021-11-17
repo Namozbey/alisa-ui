@@ -4,6 +4,8 @@ const colors = {
   danger: '#f76659',
   warning: '#f8dd4e',
   info: '#3f94f7',
+  bordercolor: '#E5E9EB',
+  bgcolor: '#E0EEFF',
   darkgray: {
     '1': '#1a1f23',
     '2': '#242c31',
