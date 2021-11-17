@@ -1,4 +1,4 @@
-const colors = {
+export default {
   primary: '#0d72f6',
   success: '#22c347',
   danger: '#f76659',
@@ -100,5 +100,3 @@ const colors = {
     '50': '#f6fbff',
   },
 }
-
-module.exports = colors
