@@ -60,6 +60,7 @@ class Input extends PureComponent {
       onChange,
       size,
       prefix,
+      placeholder,
       suffix,
       status,
       type,
@@ -87,6 +88,7 @@ class Input extends PureComponent {
                 type={type}
                 value={value}
                 onChange={onChange}
+                placeholder={placeholder}
                 className={inputClassBySize(size)}
               />
               {addonAfter}
@@ -109,6 +111,7 @@ Input.propTypes = {
   id: PropTypes.string,
   // maxLength: PropTypes.number,
   prefix: PropTypes.node,
+  placeholder: PropTypes.string,
   size: PropTypes.oneOf(['large', 'middle', 'small']),
   status: PropTypes.oneOf(['success', 'error', 'info', 'none']),
   suffix: PropTypes.node,
@@ -124,6 +127,7 @@ Input.defaultProps = {
   addonBefore: undefined,
   prefix: undefined,
   suffix: undefined,
+  placeholder: undefined,
   // allowClear: false,
   // bordered: true,
   // disabled: false,
