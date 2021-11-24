@@ -65,6 +65,7 @@ class Input extends PureComponent {
       status,
       type,
       width,
+      ...props
     } = this.props
 
     const prefSuffex = element =>
@@ -90,6 +91,7 @@ class Input extends PureComponent {
                 onChange={onChange}
                 placeholder={placeholder}
                 className={inputClassBySize(size)}
+                {...props}
               />
               {addonAfter}
             </SizeWrapper>
