@@ -58,7 +58,6 @@ class OptionInput extends PureComponent {
       hideLabel,
       checkbox,
       id,
-      onBoxChange,
       ...rest
     } = this.props
     const { checked } = this.state
@@ -83,7 +82,7 @@ class OptionInput extends PureComponent {
           checked={checked}
           tabIndex="-1"
           innerRef={this.inputRef}
-          onChange={onBoxChange}
+          onChange={() => {}}
         />
         <Flex
           items="center"
@@ -144,7 +143,6 @@ OptionInput.propTypes = {
   defaultChecked: PropTypes.bool,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
-  onBoxChange: PropTypes.func,
   checkbox: PropTypes.bool,
   id: PropTypes.string,
 }
@@ -154,7 +152,6 @@ OptionInput.defaultProps = {
   defaultChecked: undefined,
   checked: undefined,
   onChange: undefined,
-  onBoxChange: undefined,
   checkbox: false,
   id: undefined,
 }
