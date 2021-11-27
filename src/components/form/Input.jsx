@@ -56,6 +56,7 @@ class Input extends PureComponent {
       id,
       addonAfter,
       addonBefore,
+      disabled,
       value,
       onChange,
       size,
@@ -96,6 +97,11 @@ class Input extends PureComponent {
               {addonAfter}
             </SizeWrapper>
             {prefSuffex(suffix)}
+            {disabled ? (
+              <div className="absolute inset-0 bg-white opacity-60 cursor-not-allowed" />
+            ) : (
+              <></>
+            )}
           </InputWrapper>
         </RingWrapper>
       </div>
@@ -109,7 +115,7 @@ Input.propTypes = {
   // allowClear: PropTypes.bool,
   // bordered: PropTypes.bool,
   // defaultValue: PropTypes.string,
-  // disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   id: PropTypes.string,
   // maxLength: PropTypes.number,
   prefix: PropTypes.node,
@@ -132,7 +138,7 @@ Input.defaultProps = {
   placeholder: undefined,
   // allowClear: false,
   // bordered: true,
-  // disabled: false,
+  disabled: false,
   id: undefined,
   size: 'middle',
   status: 'none',
