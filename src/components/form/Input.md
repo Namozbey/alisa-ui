@@ -12,7 +12,7 @@ Status
 
 ```jsx
 <Row style={{ gap: 10 }}>
-  <Input status="success" width={270} value="asdasdsa" />
+  <Input status="success" width={270} />
   <Input status="error" width={270} />
   <Input status="info" width={270} />
 </Row>

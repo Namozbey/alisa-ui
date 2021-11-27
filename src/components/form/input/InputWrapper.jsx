@@ -19,7 +19,7 @@ const InputWrapper = forwardRef(({ status, width, children }, ref) => {
         overflow-hidden	
         rounded-md
         w-full
-        border-2
+        border
         transition
         ${classesByStatus[status]}
       `}
