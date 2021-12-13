@@ -76,6 +76,13 @@ module.exports = {
             current: 'current',
             white: '#ffffff',
             black: '#000000',
+            primary: '#1e88e5',
+            success: '#43a047',
+            danger: '#f44336',
+            warning: '#ffeb3b',
+            info: '#2196f3',
+            bordercolor: '#E5E9EB',
+            bgcolor: '#E0EEFF',
             'blue-gray': {
                 50: '#eceff1',
                 100: '#cfd8dc',
