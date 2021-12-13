@@ -24,13 +24,15 @@ export default function Input() {
             type="text"
             color="${color}"
             size="${size}"
-            outline={${outline}}
-            placeholder="${placeholder}"${
-        errorMessage ? `\n            error="${errorMessage}"` : ''
-    }${successMessage ? `\n            success="${successMessage}"` : ''}
+            placeholder="${placeholder}" ${errorMessage
+                ? `\nerror="${errorMessage}"`
+                : ''} ${successMessage
+                ? `\nsuccess="${successMessage}"`
+                : ''}
         />
     )
-}`;
+}
+    `
 
     return (
         <>

@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import SizeWrapper from './wrappers/SizeWrapper'
-import RingWrapper from './wrappers/RingWrapper'
-import InputWrapper from './wrappers/InputWrapper'
+import SizeWrapper from '../wrappers/SizeWrapper'
+import RingWrapper from '../wrappers/RingWrapper'
+import InputWrapper from '../wrappers/InputWrapper'
 
 const inputClassBySize = size => {
   const initial = 'flex-1 min-w-0 outline-none -my-px bg-transparent '
