@@ -1,4 +1,4 @@
-# @material-tailwind
+<!-- # @material-tailwind
 
 ![version](https://img.shields.io/badge/version-0.3.4-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) <a href="https://github.com/creativetimofficial/material-tailwind/issues?q=is%3Aopen+is%3Aissue" target="_blank">![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/md-tailwind.svg)</a> <a href="https://github.com/creativetimofficial/material-tailwind/issues?q=is%3Aissue+is%3Aclosed" target="_blank">![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/md-tailwind.svg)</a>
 
@@ -148,4 +148,4 @@ Facebook: <a href="https://www.facebook.com/CreativeTim" target="_blank">https:/
 
 Dribbble: <a href="https://dribbble.com/creativetim" target="_blank">https://dribbble.com/creativetim</a>
 
-Instagram: <a href="https://www.instagram.com/creativetimofficial/" target="_blank">https://www.instagram.com/creativetimofficial/</a>
+Instagram: <a href="https://www.instagram.com/creativetimofficial/" target="_blank">https://www.instagram.com/creativetimofficial/</a> -->
