@@ -36,6 +36,8 @@ export default function Input ({
   status,
   type,
   width,
+  style,
+  className,
   ...props
 }) {
   const prefSuffex = element =>
@@ -50,7 +52,7 @@ export default function Input ({
   return (
     <div className="alisa-input">
       <RingWrapper color={colorsByStatus(status)}>
-        <InputWrapper status={status} width={width}>
+        <InputWrapper status={status} width={width} style={style} className={className}>
           {prefSuffex(prefix)}
           <SizeWrapper size={size}>
             {addonBefore}

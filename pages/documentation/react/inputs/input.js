@@ -7,6 +7,7 @@ import SmallHeading from "components/Documentation/SmallHeading.js";
 import InputCode from "components/Documentation/JavaScript/React/Inputs/InputCode";
 import InputIconCode from "components/Documentation/JavaScript/React/Inputs/InputIconCode";
 import Input from "components/Input/Input";
+import Select from "components/Select/Select";
 
 export default function Inputs() {
   const [copy, setCopy] = useState(null);
@@ -21,6 +22,8 @@ export default function Inputs() {
         />
         <SmallHeading title="Input" />
         <Input type="text" placeholder="Input" />
+        <br />
+        <Select />
 
         <div className="h-20">&nbsp;</div>
 
