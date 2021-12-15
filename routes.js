@@ -94,8 +94,18 @@ const routes = [
                 name: 'Images',
             },
             {
-                path: '/documentation/react/inputs',
                 name: 'Inputs',
+                state: 'reactInputsState',
+                subRoutes: [
+                    {
+                        path: '/documentation/react/inputs/input',
+                        name: 'Input',
+                    },
+                    {
+                        path: '/documentation/react/inputs/textField',
+                        name: 'TextField',
+                    }
+                ],
             },
             {
                 path: '/documentation/react/labels',
