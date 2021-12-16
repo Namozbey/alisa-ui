@@ -26,6 +26,16 @@ export default function Select ({
   loading,
   disabled,
   options,
+  value,
+  defaultValue,
+  styles,
+  onChange,
+  className,
+  classNamePrefix,
+  style,
+  autoFocus,
+  backspaceRemovesValue,
+  blurInputOnSelect,
   ...props
 }) {
   const placeholderColor = colors.gray['400']
@@ -113,17 +123,25 @@ export default function Select ({
   };
 
   return (
-    <div className='alisa-select'>
+    <div className={`alisa-select ${className}`} style={style}>
       <RingWrapper color={color}>
         <ReactSelect
+          styles={{ ...customStyles, ...styles }}
+          autoFocus={autoFocus}
           isSearchable={searchable}
           isClearable={clearable}
           isMulti={multible}
           isRtl={isRtl}
+          blurInputOnSelect={blurInputOnSelect}
           isLoading={loading}
           isDisabled={disabled}
+          value={value}
+          defaultValue={defaultValue}
           options={options}
-          styles={customStyles}
+          onChange={onChange}
+          classNamePrefix={classNamePrefix}
+          backspaceRemovesValue={backspaceRemovesValue}
+          onInputChange={onInputChange}
           {...props}
         />
       </RingWrapper>
@@ -135,18 +153,28 @@ Select.PropTypes = {
   autoFocus: PropTypes.bool,
   backspaceRemovesValue: PropTypes.bool,
   blurInputOnSelect: PropTypes.bool,
-  blurInputOnSelect: PropTypes.bool,
   searchable: PropTypes.bool,
   clearable: PropTypes.bool,
   multible: PropTypes.bool,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   isRtl: PropTypes.bool,
+  value: PropTypes.string,
+  defaultValue: PropTypes.string,
+  className: PropTypes.string,
+  classNamePrefix: PropTypes.string,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onInputChange: PropTypes.func,
+  styles: PropTypes.object,
+  style: PropTypes.object,
   size: PropTypes.oneOf(['large', 'middle', 'small']),
   color: PropTypes.oneOf(['blueGray', 'gray', 'brown', 'deepOrange', 'orange', 'amber', 'yellow', 'lime', 'lightGreen', 'green', 'teal', 'cyan', 'lightBlue', 'blue', 'indigo', 'deepPurple', 'purple', 'pink', 'red', undefined]),
 }
 
 Select.defaultProps = {
   size: 'middle',
-  color: 'teal'
+  styles: {},
+  searchable: false
 }
