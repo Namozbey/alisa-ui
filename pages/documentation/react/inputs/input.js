@@ -8,6 +8,8 @@ import InputCode from "components/Documentation/JavaScript/React/Inputs/InputCod
 import InputIconCode from "components/Documentation/JavaScript/React/Inputs/InputIconCode";
 import Input from "components/Input/Input";
 import Select from "components/Select/Select";
+import FieldArea from "components/Textarea/FieldArea";
+import Switch from "components/Switch/Switch";
 
 export default function Inputs() {
   const [copy, setCopy] = useState(null);
@@ -23,7 +25,17 @@ export default function Inputs() {
         <SmallHeading title="Input" />
         <Input type="text" placeholder="Input" />
         <br />
-        <Select />
+        <Select
+          options={[
+            { label: 'Lavash', value: 1 },
+            { label: 'Burger', value: 2 },
+            { label: 'Pitsa', value: 3 },
+          ]}
+        />
+        <br />
+        <FieldArea />
+        <br />
+        <Switch />
 
         <div className="h-20">&nbsp;</div>
 
