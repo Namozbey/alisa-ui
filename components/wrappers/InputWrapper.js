@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function InputWrapper ({ status, width, children, ...props }) {
+export default function InputWrapper ({ status, width, children, style, ...props }) {
   const classesByStatus = (status) => {
     switch (status) {
       case 'success': return 'border-success'
@@ -25,7 +25,7 @@ export default function InputWrapper ({ status, width, children, ...props }) {
         overflow-hidden
         ${classesByStatus(status)}
       `}
-      style={{ width }}
+      style={{ width, ...style }}
     >
       {children}
     </div>
@@ -34,12 +34,14 @@ export default function InputWrapper ({ status, width, children, ...props }) {
 
 InputWrapper.propTypes = {
   children: PropTypes.node,
-  status: PropTypes.oneOf(['success', 'error', 'info']),
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  status: PropTypes.oneOf(['success', 'error', 'info', 'none']),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  style: PropTypes.object,
 }
 
 InputWrapper.defaultProps = {
   children: undefined,
-  status: undefined,
+  status: 'none',
   width: 'auto',
+  style: {}
 }

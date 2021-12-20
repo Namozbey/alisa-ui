@@ -97,7 +97,7 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   // onPressEnter: PropTypes.func,
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 Input.defaultProps = {
