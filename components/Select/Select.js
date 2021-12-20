@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import ReactSelect from 'react-select'
 import RingWrapper from '../wrappers/RingWrapper'
@@ -36,12 +36,21 @@ export default function Select ({
   autoFocus,
   backspaceRemovesValue,
   blurInputOnSelect,
+  onInputChange,
   ...props
 }) {
   const placeholderColor = colors.gray['400']
   const primaryColor = colors?.[color]?.['600'] ?? colors.primary
   const primaryLightColor = colors?.[color]?.['100'] ?? colors.blue['100']
   const borderColor = colors?.[color]?.[400] ?? colors.bordercolor
+
+  const getValue = useCallback((value, data = []) => {
+    if (value && data && data.length) {
+      const res = data?.find(elm => elm.value === value)
+      return res ?? { label: value, value: value }
+    }
+    return undefined
+  }, [])
 
   const customStyles = {
     control: (base, state) => ({
@@ -135,10 +144,10 @@ export default function Select ({
           blurInputOnSelect={blurInputOnSelect}
           isLoading={loading}
           isDisabled={disabled}
-          value={value}
-          defaultValue={defaultValue}
+          value={getValue(value, options)}
+          defaultValue={getValue(defaultValue, options)}
           options={options}
-          onChange={onChange}
+          onChange={elm => onChange(elm.value, elm)}
           classNamePrefix={classNamePrefix}
           backspaceRemovesValue={backspaceRemovesValue}
           onInputChange={onInputChange}
@@ -149,7 +158,7 @@ export default function Select ({
   )
 }
 
-Select.PropTypes = {
+Select.propTypes = {
   autoFocus: PropTypes.bool,
   backspaceRemovesValue: PropTypes.bool,
   blurInputOnSelect: PropTypes.bool,
@@ -159,13 +168,14 @@ Select.PropTypes = {
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
   isRtl: PropTypes.bool,
-  value: PropTypes.string,
-  defaultValue: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,
   classNamePrefix: PropTypes.string,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
+  options: PropTypes.array,
   onInputChange: PropTypes.func,
   styles: PropTypes.object,
   style: PropTypes.object,
@@ -176,5 +186,6 @@ Select.PropTypes = {
 Select.defaultProps = {
   size: 'middle',
   styles: {},
-  searchable: false
+  searchable: false,
+  onChange: () => {}
 }
