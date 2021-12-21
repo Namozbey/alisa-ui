@@ -17,7 +17,9 @@
     "copy:module": "cp -r node_modules/material-ripple-effects lib/ && npm run build:tailwind",
     "prep:package": "cp -r lib-babel.config.json babel.config.json && npm run make:package && npm run assets:package && rm -rf babel.config.json && npm run copy:module",
     "publish:package": "npm run prep:package && cd lib && npm publish --access=public && cd ../",
-    "deploy": "npm run build && npm run export && cp CNAME out/CNAME && touch out/.nojekyll && git add out/ && git commit -m \"ready to deploy\" && git push && git push origin --delete gh-pages && git subtree push --prefix out origin gh-pages"
+    "deploy": "npm run build && npm run export && cp CNAME out/CNAME && touch out/.nojekyll && git add out/ && git commit -m \"ready to deploy\" && git push && git push origin --delete gh-pages && git subtree push --prefix out origin gh-pages",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.13.0",
@@ -46,7 +48,14 @@
     "@babel/parser": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/react": "^6.4.9",
     "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.3",
     "create-index": "^2.6.0",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
