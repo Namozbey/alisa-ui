@@ -35,6 +35,8 @@ class Input extends PureComponent {
       status,
       type,
       width,
+      style,
+      className,
       ...props
     } = this.props
 
@@ -48,8 +50,14 @@ class Input extends PureComponent {
       )
 
     return (
-      <div className="alisa-input">
-        <RingWrapper color={colorsByStatus[status]}>
+      <div
+        className={`alisa-input ${className}`}
+        style={{ cursor: disabled ? 'not-allowed' : '', ...style }}
+      >
+        <RingWrapper
+          color={colorsByStatus[status]}
+          style={disabled ? { pointerEvents: 'none', opacity: 0.6 } : {}}
+        >
           <InputWrapper status={status} width={width}>
             {prefSuffex(prefix)}
             <SizeWrapper size={size}>
@@ -66,11 +74,11 @@ class Input extends PureComponent {
               {addonAfter}
             </SizeWrapper>
             {prefSuffex(suffix)}
-            {disabled ? (
+            {/* {disabled ? (
               <div className="absolute inset-0 bg-white opacity-60 cursor-not-allowed" />
             ) : (
               <></>
-            )}
+            )} */}
           </InputWrapper>
         </RingWrapper>
       </div>
@@ -96,7 +104,9 @@ Input.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   // onPressEnter: PropTypes.func,
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  style: PropTypes.object,
+  className: PropTypes.string,
 }
 
 Input.defaultProps = {
@@ -115,6 +125,8 @@ Input.defaultProps = {
   value: undefined,
   onChange: () => {},
   width: 'auto',
+  style: {},
+  className: '',
 }
 
 export default Input

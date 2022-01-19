@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-const RingWrapper = forwardRef(({ children, color }) => {
+const RingWrapper = forwardRef(({ children, color, style }, ref) => {
   const classByColor = color ? `focus-within:ring-${color}` : ''
 
   return (
     <div
+      ref={ref}
       className={`
         focus-within:ring-2
         focus-within:outline-none
@@ -13,6 +14,7 @@ const RingWrapper = forwardRef(({ children, color }) => {
         rounded-md
         transition
       `}
+      style={style}
     >
       {children}
     </div>
