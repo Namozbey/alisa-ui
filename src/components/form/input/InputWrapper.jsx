@@ -33,7 +33,7 @@ const InputWrapper = forwardRef(({ status, width, children }, ref) => {
 InputWrapper.propTypes = {
   children: PropTypes.node,
   status: PropTypes.oneOf(['success', 'error', 'info', 'none']),
-  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 InputWrapper.defaultProps = {

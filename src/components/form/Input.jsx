@@ -64,6 +64,7 @@ class Input extends PureComponent {
               {addonBefore}
               <input
                 id={id}
+                ref={this.ref}
                 type={type}
                 value={value}
                 onChange={onChange}
