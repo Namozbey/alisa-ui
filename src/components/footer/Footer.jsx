@@ -7,6 +7,7 @@ import { Container } from '../container'
 
 const Footer = forwardRef(({ theme, is, children, ...rest }, ref) => (
   <Box
+    ref={ref}
     is={is}
     role="contentinfo"
     p={{ t: theme.spacing.lg, b: theme.spacing.xl }}

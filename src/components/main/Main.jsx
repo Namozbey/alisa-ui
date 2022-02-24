@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Box } from '../primitives'
 
 const Main = forwardRef(({ children, is, id, ...rest }, ref) => (
-  <Box is={is} id={id} role="main" {...rest}>
+  <Box ref={ref} is={is} id={id} role="main" {...rest}>
     {children}
   </Box>
 ))

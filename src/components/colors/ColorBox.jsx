@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { defaultColors } from '../theme'
 
-const ColorBox = forwardRef(({ color, children }) => {
+const ColorBox = forwardRef(({ color, children }, ref) => {
   const [name, level] = color.split('-')
   const hex = level ? defaultColors[name][level] : defaultColors[name]
 
   return (
-    <div style={{ width: 150 }}>
+    <div style={{ width: 150 }} ref={ref}>
       <div
         style={{
           height: 50,

@@ -5,7 +5,7 @@ import { Title } from '../typography'
 
 const ContentTitle = forwardRef(
   ({ content: { id }, visuallyHidden, ...rest }, ref) => (
-    <Title id={id} visuallyHidden={visuallyHidden} {...rest} />
+    <Title ref={ref} id={id} visuallyHidden={visuallyHidden} {...rest} />
   ),
 )
 
