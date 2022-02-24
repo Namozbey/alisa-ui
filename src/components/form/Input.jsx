@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import SizeWrapper from './input/SizeWrapper'
 import RingWrapper from './input/RingWrapper'
@@ -19,9 +19,19 @@ const colorsByStatus = {
   success: 'green-300',
   error: 'red-300',
 }
-class Input extends PureComponent {
-  render() {
-    const {
+
+const prefSuffex = element =>
+  element ? (
+    <div className="bg-lightgray-5 px-4 flex items-center h-auto">
+      <div className="text-midgray-2 text-base -my-px">{element}</div>
+    </div>
+  ) : (
+    <></>
+  )
+
+const Input = forwardRef(
+  (
+    {
       id,
       addonAfter,
       addonBefore,
@@ -38,54 +48,44 @@ class Input extends PureComponent {
       style,
       className,
       ...props
-    } = this.props
-
-    const prefSuffex = element =>
-      element ? (
-        <div className="bg-lightgray-5 px-4 flex items-center h-auto">
-          <div className="text-midgray-2 text-base -my-px">{element}</div>
-        </div>
-      ) : (
-        <></>
-      )
-
-    return (
-      <div
-        className={`alisa-input ${className}`}
-        style={{ cursor: disabled ? 'not-allowed' : '', ...style }}
+    },
+    ref,
+  ) => (
+    <div
+      className={`alisa-input ${className}`}
+      style={{ cursor: disabled ? 'not-allowed' : '', ...style }}
+    >
+      <RingWrapper
+        color={colorsByStatus[status]}
+        style={disabled ? { pointerEvents: 'none', opacity: 0.6 } : {}}
       >
-        <RingWrapper
-          color={colorsByStatus[status]}
-          style={disabled ? { pointerEvents: 'none', opacity: 0.6 } : {}}
-        >
-          <InputWrapper status={status} width={width}>
-            {prefSuffex(prefix)}
-            <SizeWrapper size={size}>
-              {addonBefore}
-              <input
-                id={id}
-                ref={this.ref}
-                type={type}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                className={inputClassBySize(size)}
-                {...props}
-              />
-              {addonAfter}
-            </SizeWrapper>
-            {prefSuffex(suffix)}
-            {/* {disabled ? (
+        <InputWrapper status={status} width={width}>
+          {prefSuffex(prefix)}
+          <SizeWrapper size={size}>
+            {addonBefore}
+            <input
+              id={id}
+              ref={ref}
+              type={type}
+              value={value}
+              onChange={onChange}
+              placeholder={placeholder}
+              className={inputClassBySize(size)}
+              {...props}
+            />
+            {addonAfter}
+          </SizeWrapper>
+          {prefSuffex(suffix)}
+          {/* {disabled ? (
               <div className="absolute inset-0 bg-white opacity-60 cursor-not-allowed" />
             ) : (
               <></>
             )} */}
-          </InputWrapper>
-        </RingWrapper>
-      </div>
-    )
-  }
-}
+        </InputWrapper>
+      </RingWrapper>
+    </div>
+  ),
+)
 
 Input.propTypes = {
   addonAfter: PropTypes.node,
@@ -106,7 +106,7 @@ Input.propTypes = {
   onChange: PropTypes.func,
   // onPressEnter: PropTypes.func,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  style: PropTypes.object,
+  // style: PropTypes.object,
   className: PropTypes.string,
 }
 
