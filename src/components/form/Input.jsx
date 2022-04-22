@@ -70,6 +70,7 @@ const Input = forwardRef(
               value={value}
               onChange={onChange}
               placeholder={placeholder}
+              disabled={disabled}
               className={inputClassBySize(size)}
               {...props}
             />
